@@ -9,8 +9,11 @@ const Posts = () => {
     // Not sure yet how I feel about Groq
     SanityClient.fetch(`
       *[_type == "post"]{
+        _id,
         title,
         slug,
+        author->,
+        categories[]->,
         mainImage{
           asset->{_id, url}
         }
@@ -48,7 +51,14 @@ const Posts = () => {
 
               <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                 <div className="flex-1">
-                  <Link to={'/blog/' + post.slug.current} key={post.slug.current}>
+                  <p className="space-x-2 text-sm font-medium">
+                    {post.categories.map((category: any) => (
+                      <Link to={'/blog/category/' + category.slug.current} key={category.slug.current} className="underline">
+                        {category.title}
+                      </Link>
+                    ))}
+                  </p>
+                  <Link to={'/blog/' + post.slug.current} key={post.slug.current} className="block mt-2">
                     <p className="text-xl font-semibold text-gray-900">{post.title}</p>
                   </Link>
                 </div>
