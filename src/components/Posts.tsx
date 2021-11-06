@@ -53,12 +53,12 @@ const Posts = () => {
                 <div className="flex-1">
                   <p className="space-x-2 text-sm font-medium">
                     {post.categories.map((category: any) => (
-                      <Link to={'/blog/category/' + category.slug.current} key={category.slug.current} className="underline">
+                      <Link to={'/blog/category/' + category.slug.current} key={category.slug.current} className="no-underline">
                         {category.title}
                       </Link>
                     ))}
                   </p>
-                  <Link to={'/blog/' + post.slug.current} key={post.slug.current} className="block mt-2">
+                  <Link to={'/blog/' + post.slug.current} key={post.slug.current} className="block mt-2 no-underline">
                     <p className="text-xl font-semibold text-gray-900">{post.title}</p>
                   </Link>
                 </div>
