@@ -6,5 +6,9 @@
   html,
   body { @apply h-full bg-gray-50; }
 
+  /* This looks a lot better without nesting */
+  a { @apply text-green-500 underline; }
+  a:hover { @apply text-green-700 no-underline; }
+
   #root { @apply flex flex-col min-h-full; }
 }
