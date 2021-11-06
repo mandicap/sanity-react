@@ -14,7 +14,7 @@ const App = () => {
               {/* Desktop navigation */}
               <div className="hidden ml-10 space-x-8 lg:block">
                 <Link to="/" className="text-base font-medium text-white hover:text-blue-200">Home</Link>
-                <Link to="/blog" className="text-base font-medium text-white hover:text-indigo-50">Blog</Link>
+                <Link to="/blog" className="text-base font-medium text-white hover:text-blue-200">Blog</Link>
               </div>
             </div>
 
@@ -29,7 +29,7 @@ const App = () => {
           {/* Mobile navigation */}
           <div className="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
             <Link to="/" className="text-base font-medium text-white hover:text-blue-200">Home</Link>
-            <Link to="/blog" className="text-base font-medium text-white hover:text-indigo-50">Blog</Link>
+            <Link to="/blog" className="text-base font-medium text-white hover:text-blue-200">Blog</Link>
           </div>
         </nav>
       </header>
