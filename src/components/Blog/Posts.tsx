@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import SanityClient from '../../client';
 
@@ -25,6 +26,10 @@ const Posts = () => {
 
   return (
     <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+      <Helmet>
+        <title>Blog</title>
+      </Helmet>
+
       {allPosts.map((post) => (
         <div key={post.title} className="flex flex-col rounded-sm shadow-sm overflow-hidden">
             <div className="flex-shrink-0">

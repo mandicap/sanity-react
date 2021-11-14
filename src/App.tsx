@@ -1,10 +1,15 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { LogoGithubIcon } from '@primer/octicons-react';
+import { Helmet } from 'react-helmet';
 
 const App = () => {
   return (
     <>
+      <Helmet>
+        <title>Sanity/React</title>
+      </Helmet>
+
       <header className="bg-blue-500 border-b border-blue-800">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="w-full py-6 flex items-center justify-between border-b border-blue-400 lg:border-none">
